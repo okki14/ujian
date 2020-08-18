@@ -11,27 +11,47 @@
         <p>1.segitiga</p>
         <p>2.persegi</p>
         <p>3.segitigakebalik</p>
-        <p>Jenis bangun:<br><input type="number" id="jenis"></p>
-        <p>ukuran:<br><input type="number" id="ukuran"></p>
+        <p>Jenis:<br><input type="number" id="Jenis"></p>
+        <p>ukuran:<br><input type="number"  id="ukuran"></p>
         <button onclick="lihat()">lihat</button>
         <p id="Hasil"> Hasil! </p>
     
 </body>
 <script>
-    var a=prompt('masukkan huruf tinggi')
-        function segitiga(tinggi){
+    const lihat=()=>{
+            var input=document.getElementById("jenis").value;
+            var output=document.getElementById("ukuran").value;
             var output=''
-            for(let i=0;i<tinggi;i++){
-                for(let j=i;j<tinggi;j++){
-                    output+='  '
+            if(jenis==1){
+                    for(let i=0;i<ukuran;i++){
+                        for(let j=i;j<ukuran;j++){
+                            output+='*&nbsp'
+                        }
+                        output+='<br>'
+                    }
                 }
-                for(let k=0;k<=i;k++){
+                if(jenis==2){
+                    for(let i=0;i<ukuran;i++){
+                for(let j=i;j<i;j++){
+                    output+='*&nbsp'
+                }
+                output+='<br>'
+            }  
+                }if(jenis==3){
+                    for(let i=0;i<ukuran;i++){
+                for(let j=i;j<ukuran;j++){
+                    output+='&nbsp; &nbsp'
+                }
+                for(let k=0;k<=i+1;k++){
                     output+=' *'
                 }
-                output+='\n'
+                output+='<br>'
             }
-            return output
-        }    
-        alert(segitiga(a))
+                } 
+
+                document.getElementById("Hasil").innerHTML=output
+            }
+        
+    
 </script>
 </html>
