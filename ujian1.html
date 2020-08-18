@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <h1>Drawing Tools</h1>
+        <p>1.segitiga</p>
+        <p>2.persegi</p>
+        <p>3.segitigakebalik</p>
+        <p>Jenis bangun:<br><input type="number" id="jenis"></p>
+        <p>ukuran:<br><input type="number" id="ukuran"></p>
+        <button onclick="lihat()">lihat</button>
+        <p id="Hasil"> Hasil! </p>
+    
+</body>
+<script>
+    var a=prompt('masukkan huruf tinggi')
+        function segitiga(tinggi){
+            var output=''
+            for(let i=0;i<tinggi;i++){
+                for(let j=i;j<tinggi;j++){
+                    output+='  '
+                }
+                for(let k=0;k<=i;k++){
+                    output+=' *'
+                }
+                output+='\n'
+            }
+            return output
+        }    
+        alert(segitiga(a))
+</script>
+</html>
